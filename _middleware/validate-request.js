@@ -1,6 +1,8 @@
-module.exports = validateRequest;
 
-function validateRequest(req, next, schema) {
+
+const Joi = require('joi');
+
+function validateRequest(req, res, next, schema) {
     const options = {
         abortEarly: false,
         allowUnknown: true,
@@ -14,3 +16,5 @@ function validateRequest(req, next, schema) {
         next();
     }
 }
+
+module.exports = validateRequest;

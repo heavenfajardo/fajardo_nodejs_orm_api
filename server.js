@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/users', require('./users/users.controller'));
+app.use('/products', require('./products/products.controller'));
 
 app.use(errorHandler);
 
